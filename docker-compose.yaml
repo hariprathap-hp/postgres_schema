@@ -9,3 +9,9 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
+  your-go-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
